@@ -1,0 +1,40 @@
+        body,
+        html {
+            text-align: center;
+            background: url('../images/bg.png');
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            position: absolute;
+
+        }
+
+        canvas {
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            padding: 0px;
+            box-shadow: 3px 3px 15px 5px #808080;
+            background-image: linear-gradient(to bottom, #5CC3FF, #73FF26, #734C26);
+            z-index: 100;
+            border: 10px rgb(0, 0, 75) solid;
+        }
+
+        menu {
+            top: 0px;
+            bottom: 200px;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            position: absolute;
+            text-align: center;
+            z-index: 0;
+        }
+
