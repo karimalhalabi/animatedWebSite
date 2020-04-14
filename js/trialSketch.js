@@ -8,7 +8,7 @@ var boy1 = new character("01",width,height,3);
 function preload() {
     console.log("loading images");
     //load background image.
-    bgImg = loadImage('images/colleges.jpg');
+    bgImg = loadImage('images/Colleges.jpg');
 
     //load boy1 images
     boy1.preload();
