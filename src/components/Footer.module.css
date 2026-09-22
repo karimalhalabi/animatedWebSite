@@ -1,0 +1,13 @@
+.footer {
+  height: var(--footerHeight);
+  padding: 0 clamp(20px, 5vw, 76px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8b7469;
+  font-size: 13px;
+  border-top: 1px solid #eaded3;
+  background: #fffdfa;
+}
+.footer span:last-child { display: flex; align-items: center; gap: 6px; }
+.footer svg { color: var(--rustLight); }

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif;
+  color: #33251f;
+  background: #f7f3ec;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --rust: #9a3f1f;
+  --rustDark: #662512;
+  --rustLight: #c66b43;
+  --cream: #f7f3ec;
+  --paper: #fffdfa;
+  --ink: #33251f;
+  --muted: #7d6b62;
+  --line: #eaded3;
+  --green: #2b7a4b;
+  --headerHeight: 100px;
+  --footerHeight: 70px;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { min-width: 320px; overflow: hidden; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid rgba(198, 107, 67, 0.4);
+  outline-offset: 3px;
+}
+::selection { color: white; background: var(--rust); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

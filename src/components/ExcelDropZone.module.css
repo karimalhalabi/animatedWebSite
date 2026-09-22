@@ -1,0 +1,56 @@
+.dropZone {
+  min-height: 175px;
+  border: 2px dashed #ddbea9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--rustDark);
+  background: linear-gradient(145deg, #fffdfa, #fcf5f0);
+  transition: 220ms ease;
+}
+.dropZone:hover, .dragging {
+  border-color: var(--rust);
+  background: #fbede4;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(102, 37, 18, 0.08);
+}
+.uploadIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--rust);
+  background: white;
+  box-shadow: 0 6px 20px rgba(102, 37, 18, 0.1);
+  margin-bottom: 3px;
+}
+.dropZone small { color: var(--muted); }
+.fileCard {
+  min-height: 92px;
+  padding: 16px;
+  border: 1px solid #d9e8dd;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 13px;
+  background: #f7fcf8;
+}
+.fileIcon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #dff2e5;
+  color: var(--green);
+}
+.fileCard > span:nth-child(2) { min-width: 0; display: flex; flex-direction: column; }
+.fileCard strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fileCard small { display: flex; align-items: center; gap: 5px; color: var(--green); margin-top: 3px; }
+.fileCard button { border: 0; background: transparent; color: var(--muted); padding: 8px; border-radius: 10px; }
+.fileCard button:hover { color: #9b2c2c; background: #f9e6e3; }
