@@ -1,0 +1,498 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 100px;
+  flex-shrink: 0;
+  background: #fff;
+  border-bottom: 1px solid #e9edf3;
+  display: flex;
+  align-items: center;
+  padding: 0 38px;
+  gap: 25px;
+}
+.headerDivider {
+  height: 35px;
+  width: 1px;
+  background: #e8edf4;
+}
+.tagline {
+  font-size: 12px;
+  color: #46556a;
+  line-height: 1.8;
+  margin: 0;
+}
+.tagline span {
+  display: block;
+  font-size: 10px;
+  color: #97a0af;
+}
+.topNav {
+  display: flex;
+  gap: 34px;
+  margin-right: 65px;
+  height: 100%;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.topNav a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #8a94a3;
+}
+.topNav a[aria-current] {
+  color: #1756a8;
+}
+.topNav a[aria-current]:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: #1756a8;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 3px;
+}
+.headerActions {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.notification {
+  background: none;
+  border: 0;
+  color: #77859a;
+  font-size: 20px;
+  padding: 5px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.notification i {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  background: #efb940;
+  border-radius: 50%;
+  top: 4px;
+  right: 5px;
+}
+.actionDivider {
+  width: 1px;
+  height: 30px;
+  background: #edf0f5;
+}
+.userButton {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 0;
+  background: none;
+  color: #2b3b53;
+  text-align: right;
+  padding: 0;
+}
+.userButton span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.userButton small {
+  display: block;
+  color: #99a2b1;
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.userButton > svg {
+  margin-right: 13px;
+  font-size: 12px;
+  color: #9aa5b5;
+}
+.workspace {
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  width: 242px;
+  flex-shrink: 0;
+  background: #fff;
+  border-left: 1px solid #e9edf3;
+  padding: 27px 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.workspacePicker {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 1px 25px;
+  border-bottom: 1px solid #eef1f5;
+  font-size: 11px;
+  font-weight: 700;
+}
+.workspaceIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background: #f5f7fc;
+  border: 1px solid #e4e9f3;
+  display: grid;
+  place-items: center;
+  color: #2256a0;
+  font-size: 17px;
+}
+.workspacePicker small {
+  display: block;
+  color: #9ba5b3;
+  font-size: 9px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.workspacePicker > svg {
+  margin-right: auto;
+  color: #9ba5b3;
+  font-size: 11px;
+}
+.navLabel {
+  font-size: 10px;
+  color: #a2aab8;
+  margin: 27px 14px 13px;
+}
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.sideNav a,
+.sideNav button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: none;
+  color: #7c8799;
+  font-family: inherit;
+  font-size: 11px;
+  text-align: right;
+  width: 100%;
+  transition: all 0.2s;
+}
+.sideNav a:hover,
+.sideNav button:hover {
+  background: #f5f8fc;
+  color: #1756a8;
+}
+.sideNav svg {
+  font-size: 18px;
+}
+.sideNav a.active {
+  background: #edf3fd;
+  color: #1756a8;
+  font-weight: 700;
+  box-shadow: inset -3px 0 #1756a8;
+}
+.sideNav b {
+  margin-right: auto;
+  font-size: 9px;
+  background: #1756a8;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0 5px;
+}
+.sidebarBottom {
+  margin-top: auto;
+  padding-top: 38px;
+}
+.onlineBox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  color: #788599;
+  margin: 0 7px 22px;
+  flex-wrap: wrap;
+}
+.liveDot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #34b583;
+  box-shadow: 0 0 0 3px #eaf8f1;
+}
+.miniAvatars {
+  display: flex;
+  margin-right: auto;
+  padding-right: 5px;
+}
+.miniAvatars > span {
+  margin-right: -5px;
+  border: 2px solid white;
+}
+.helpBox {
+  padding: 20px 18px;
+  background: linear-gradient(125deg, #f0f5fd, #f7f9fe);
+  border: 1px solid #e5edfa;
+  border-radius: 13px;
+  position: relative;
+  overflow: hidden;
+}
+.helpIcon {
+  height: 29px;
+  width: 29px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: #3264ae;
+  box-shadow: 0 3px 7px #bacde52b;
+  font-size: 17px;
+}
+.helpBox h4 {
+  font-size: 12px;
+  margin: 13px 0 7px;
+}
+.helpBox p {
+  font-size: 10px;
+  line-height: 1.9;
+  color: #8c97a9;
+  margin: 0;
+}
+.helpBox button {
+  border: 0;
+  background: none;
+  font-family: inherit;
+  color: #1756a8;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 15px 0 0;
+}
+.helpDecoration {
+  width: 70px;
+  height: 70px;
+  border: 14px solid #fecb3040;
+  border-radius: 50%;
+  position: absolute;
+  left: -37px;
+  top: 18px;
+}
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: none;
+  color: #8893a3;
+  font-family: inherit;
+  font-size: 10px;
+  margin: 24px 14px 4px;
+}
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 36px 24px;
+  background: #f7f9fc;
+}
+.footer {
+  height: 75px;
+  flex-shrink: 0;
+  background: white;
+  border-top: 1px solid #e9edf3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 38px;
+  gap: 20px;
+}
+.footer > div {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+.footer > div > div {
+  transform: scale(0.63);
+  transform-origin: right center;
+  width: 57px;
+}
+.footer span,
+.footer p,
+.footer button {
+  font-size: 10px;
+  color: #929dad;
+}
+.footer button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: none;
+  font-family: inherit;
+}
+.footer button svg {
+  color: #6d88a8;
+  font-size: 14px;
+}
+.profile {
+  text-align: center;
+}
+.profile p {
+  font-size: 13px;
+  color: #8691a3;
+}
+.profile button {
+  margin: 24px auto 0;
+}
+.invite {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+.invite p {
+  font-size: 12px;
+}
+.invite small {
+  display: block;
+  color: #8995a6;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.invite button {
+  font-size: 11px;
+}
+.settings p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.settings svg {
+  color: #29a982;
+}
+.helpContent {
+  line-height: 2.1;
+  font-size: 13px;
+  color: #7b879a;
+}
+.mobileMenu {
+  display: none;
+}
+.connectionBanner {
+  padding: 10px;
+  background: #fff2c6;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+@media (min-width: 1600px) {
+  .main {
+    padding: 38px 55px;
+  }
+  .sidebar {
+    width: 260px;
+  }
+}
+@media (max-width: 1150px) {
+  .sidebar {
+    width: 205px;
+    padding-inline: 14px;
+  }
+  .main {
+    padding: 26px 24px;
+  }
+  .header {
+    padding-inline: 25px;
+  }
+  .topNav {
+    margin-right: 20px;
+  }
+  .tagline {
+    display: none;
+  }
+  .headerDivider {
+    display: none;
+  }
+  .helpBox {
+    padding: 16px 12px;
+  }
+}
+@media (max-width: 850px) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar.open {
+    display: flex;
+    position: fixed;
+    z-index: 20;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    box-shadow: -10px 10px 40px #203b5620;
+    overflow: auto;
+  }
+  .mobileMenu {
+    display: block;
+    background: none;
+    border: 0;
+    font-size: 23px;
+    color: #1756a8;
+  }
+  .header {
+    gap: 20px;
+  }
+  .headerActions {
+    gap: 12px;
+  }
+  .topNav {
+    margin-right: 10px;
+  }
+  .footer {
+    padding-inline: 24px;
+  }
+  .footer > div > span {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .header {
+    padding-inline: 20px;
+  }
+  .topNav {
+    display: none;
+  }
+  .userButton > span:not(:first-child),
+  .userButton > svg {
+    display: none;
+  }
+  .main {
+    padding: 22px 18px;
+  }
+  .footer {
+    gap: 8px;
+    padding: 0 18px;
+  }
+  .footer p {
+    font-size: 8px;
+  }
+  .footer button {
+    font-size: 9px;
+  }
+  .footer > div {
+    width: 44px;
+  }
+  .headerActions {
+    gap: 14px;
+  }
+}
