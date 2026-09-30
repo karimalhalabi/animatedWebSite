@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/arabic-400.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/arabic-500.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/arabic-600.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/arabic-700.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/arabic-800.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans Arabic", sans-serif;
+  color: #273d59;
+  background: #f7f9fc;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #fecb30;
+  outline-offset: 4px;
+}
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #a9c5ec;
+  outline-offset: 2px;
+}
+::selection {
+  background: #ffdf74;
+  color: #173e73;
+}
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.primaryButton {
+  background: linear-gradient(135deg, #2869b8, #1756a8);
+  border: 1px solid #1553a4;
+  color: white;
+  box-shadow:
+    0 4px 9px #1756a817,
+    inset 0 1px #ffffff16;
+}
+.primaryButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #3379cb, #1d60b6);
+  box-shadow: 0 5px 15px #1756a829;
+}
+.secondaryButton {
+  background: #fff;
+  border: 1px solid #dce5f1;
+  color: #5679a7;
+}
+.secondaryButton:hover:not(:disabled) {
+  background: #f2f6fd;
+  border-color: #b5cdec;
+}
+.primaryButton svg,
+.secondaryButton svg {
+  font-size: 16px;
+}
+.muted {
+  color: #97a5b8;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formStack label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+  color: #647a98;
+}
+.formStack input,
+.formStack select {
+  width: 100%;
+  border: 1px solid #dfe7f2;
+  background: white;
+  border-radius: 8px;
+  color: #395979;
+  padding: 12px 13px;
+  outline-color: #adc6ea;
+  font-size: 12px;
+  min-height: 44px;
+}
+.formStack input::placeholder {
+  color: #b0bbca;
+  font-size: 11px;
+}
+.formIntro {
+  font-size: 11px;
+  line-height: 2;
+  color: #96a4b7;
+  margin: -8px 0 25px;
+}
+.formStack > button {
+  margin-top: 6px;
+}
+.loadingScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8ca0bc;
+  font-size: 13px;
+}
+.loadingScreen > span {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e3ebf7;
+  border-top-color: #1756a8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6deea;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "liqa-team-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "test": "npm run test -w backend",
+    "format": "prettier --write frontend/src backend frontend/vite.config.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.9.9"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

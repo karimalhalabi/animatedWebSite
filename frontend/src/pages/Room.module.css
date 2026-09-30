@@ -1,0 +1,440 @@
+.prejoin {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+}
+.prejoin > a {
+  font-size: 11px;
+  color: #7790b0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prejoinCard {
+  margin: auto;
+  text-align: center;
+  padding: 45px 15px;
+  max-width: 520px;
+}
+.prejoinArt {
+  width: 170px;
+  height: 140px;
+  margin: 0 auto 27px;
+  background: linear-gradient(130deg, #e0ebfb, #f4f7fd);
+  border: 1px solid #d3e1f4;
+  border-radius: 25px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  transform: rotate(-5deg);
+  box-shadow: 8px 15px 20px #253d6a08;
+}
+.prejoinArt > svg {
+  font-size: 55px;
+  color: #376cad;
+}
+.prejoinArt > span {
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  background: #fecb30;
+  border-radius: 9px;
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(18deg);
+}
+.prejoinArt > i {
+  height: 47px;
+  width: 47px;
+  position: absolute;
+  border: 11px solid #b7cfee;
+  border-radius: 50%;
+  right: -15px;
+  top: -10px;
+}
+.prejoinTag {
+  font-size: 10px;
+  color: #8d9fba;
+}
+.prejoinCard h1 {
+  font-size: 28px;
+  margin: 12px 0;
+}
+.prejoinCard > p {
+  font-size: 12px;
+  line-height: 2.1;
+  color: #91a0b5;
+}
+.prejoinButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 25px 0;
+}
+.prejoinButtons button {
+  justify-content: center;
+}
+.prejoinSecurity {
+  font-size: 10px;
+  color: #93a7bc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+.meetingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+.live {
+  font-size: 9px;
+  color: #48a685;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.live i {
+  height: 5px;
+  width: 5px;
+  background: #41b084;
+  border-radius: 50%;
+}
+.meetingHeader h1 {
+  font-size: 23px;
+  margin: 8px 0;
+}
+.meetingHeader p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 10px;
+  color: #99a5b6;
+  margin: 0;
+}
+.meetingBody {
+  display: flex;
+  gap: 20px;
+  min-height: 440px;
+  height: 58vh;
+  max-height: 650px;
+}
+.videos {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 15px;
+  min-width: 0;
+  overflow: auto;
+}
+.videos.multiple {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(160px, 1fr);
+  grid-template-rows: none;
+}
+.videoTile {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 170px;
+  background: #23334d;
+  box-shadow: inset 0 0 0 1px #ffffff0f;
+}
+.videoTile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.localVideo {
+  transform: scaleX(-1);
+}
+.videoPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 50%, #344965, #203049);
+}
+.videoLabel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 23px 15px 12px;
+  background: linear-gradient(transparent, #0d1c3766);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+.connecting {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 6px;
+  padding: 5px 9px;
+  color: #fff;
+  background: #0004;
+  font-size: 9px;
+}
+.waiting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #e2e9f3;
+  border-radius: 12px;
+  padding: 18px;
+  flex-wrap: wrap;
+}
+.waiting > svg {
+  color: #8b9fba;
+  font-size: 22px;
+}
+.waiting h3 {
+  font-size: 12px;
+  margin: 0;
+}
+.waiting p {
+  font-size: 10px;
+  color: #9ba8bb;
+  margin: 0;
+}
+.waiting button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: #ecf2fc;
+  border-radius: 6px;
+  color: #4f79ac;
+  font-family: inherit;
+  padding: 8px 10px;
+  font-size: 10px;
+  margin-right: auto;
+}
+.chat {
+  width: 285px;
+  background: white;
+  border: 1px solid #e2e9f3;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chat h2 {
+  font-size: 13px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 19px;
+  margin: 0;
+  border-bottom: 1px solid #edf1f6;
+}
+.chat h2 svg {
+  color: #8da4c2;
+}
+.messages {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.chatEmpty {
+  margin: auto;
+  text-align: center;
+  color: #a2b1c5;
+  font-size: 11px;
+}
+.chatEmpty > svg {
+  font-size: 31px;
+  color: #c5d3e6;
+}
+.chatEmpty span {
+  font-size: 9px;
+}
+.message > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #94a3b8;
+}
+.message small {
+  font-size: 8px;
+  white-space: nowrap;
+}
+.message p {
+  font-size: 11px;
+  line-height: 1.9;
+  background: #f1f4f9;
+  color: #5e7493;
+  border-radius: 10px 0 10px 10px;
+  padding: 9px 12px;
+  margin: 7px 0 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.myMessage p {
+  background: #eaf2ff;
+  color: #3b6aab;
+}
+.chat form {
+  padding: 14px;
+  border-top: 1px solid #edf1f6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chat input {
+  width: 100%;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 10px;
+  outline: 0;
+  color: #4c6688;
+  min-width: 0;
+}
+.chat form button {
+  border: 0;
+  background: #1756a8;
+  color: #fff;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  min-width: 30px;
+  height: 30px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  padding: 17px 21px;
+  border: 1px solid #e3eaf3;
+  border-radius: 12px;
+  background: white;
+  gap: 15px;
+}
+.controlGroup {
+  display: flex;
+  gap: 24px;
+}
+.controlGroup button {
+  border: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: #6982a4;
+  font-family: inherit;
+  font-size: 9px;
+}
+.controlGroup svg {
+  font-size: 19px;
+}
+.controlGroup .off {
+  color: #c67676;
+}
+.controlGroup .activeControl {
+  color: #1756a8;
+}
+.leave {
+  background: #fff0f0;
+  color: #c66363;
+  border: 1px solid #f7dcdc;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.leave svg {
+  font-size: 16px;
+}
+@media (max-width: 1150px) {
+  .chat {
+    width: 245px;
+  }
+  .meetingBody {
+    gap: 12px;
+  }
+  .videos.multiple {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .meetingBody {
+    height: auto;
+    min-height: 400px;
+    max-height: none;
+    flex-direction: column;
+  }
+  .videos {
+    height: 350px;
+    flex: auto;
+  }
+  .videos.multiple {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 400px;
+  }
+  .chat {
+    width: 100%;
+    height: 300px;
+  }
+  .controls {
+    position: sticky;
+    bottom: 8px;
+    z-index: 3;
+    padding: 13px;
+    box-shadow: 0 5px 25px #12346713;
+  }
+  .controlGroup {
+    gap: 15px;
+  }
+  .controlGroup button {
+    font-size: 7px;
+  }
+  .controlGroup svg {
+    font-size: 17px;
+  }
+  .leave {
+    font-size: 9px;
+    padding: 10px;
+  }
+  .meetingHeader h1 {
+    font-size: 19px;
+  }
+  .meetingHeader > button {
+    font-size: 9px;
+    padding: 10px;
+  }
+  .waiting p {
+    display: none;
+  }
+  .waiting h3 {
+    font-size: 10px;
+  }
+  .waiting {
+    gap: 8px;
+    padding: 13px;
+  }
+  .prejoinCard h1 {
+    font-size: 23px;
+  }
+  .prejoinCard {
+    padding-top: 40px;
+  }
+}
