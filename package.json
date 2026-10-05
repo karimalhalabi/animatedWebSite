@@ -1,0 +1,1 @@
+{"name":"student-qr","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0"},"dependencies":{"react":"^19.1.0","react-dom":"^19.1.0","qrcode":"^1.5.4","exceljs":"^4.4.0","lucide-react":"^0.468.0"},"devDependencies":{"vite":"^7.0.0"}}
